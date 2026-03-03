@@ -1,6 +1,6 @@
 # Basic Data Skills
 
-Hands-on training material for learning Python + API fundamentals with a practical "Data Detective" storyline.
+Hands-on training material for learning Python + API fundamentals with a storyline.
 
 ## What is in this repo
 
@@ -8,7 +8,7 @@ Hands-on training material for learning Python + API fundamentals with a practic
 - 6 completed solution notebooks in `solutions/` (1 to 6)
 - 1 quick reference in `cheatsheet/api_data_skills_cheatsheet.md`
 - First-run guide in `docs/FIRST_TIME_SETUP.md`
-- Optional helper script in `scripts/bootstrap.sh`
+- Optional helper scripts in `scripts/bootstrap.sh` and `scripts/bootstrap.ps1`
 - Planning docs in `api-skills-plan.md` and `implementation-plan.md`
 
 ## Learning path
@@ -23,16 +23,19 @@ Start with notebook 0, then continue in order:
 6. `5_transforming_and_saving_data.ipynb` — loops → pandas, filter/sort, CSV/Excel export
 7. `6_errors_troubleshooting_and_finale.ipynb` — error handling, debugging, finale certificate
 
-## Data Detective thread (clues)
+---
 
-Each notebook ends with a clue challenge:
+## Clone this repo
 
-1. `52.37` (latitude)
-2. `4.89` (longitude)
-3. `~17` (population in millions)
-4. `~53` (number of countries)
-5. country name (full data pipeline)
-6. finale validates clues, makes a live weather API call, prints certificate
+If you do not have the files locally yet:
+
+```bash
+git clone https://github.com/JellevanE/basic-data-skills.git
+cd basic-data-skills
+```
+
+If `git` is not installed, install Git first, then rerun the commands above.
+See: [Install Git](https://git-scm.com/install/)
 
 ---
 
@@ -42,6 +45,7 @@ If you prefer a dedicated setup document (outside notebooks), use:
 
 - `docs/FIRST_TIME_SETUP.md` (manual steps + troubleshooting)
 - `scripts/bootstrap.sh` (optional macOS/Linux helper, auto-opens Jupyter)
+- `scripts/bootstrap.ps1` (optional Windows PowerShell helper, auto-opens Jupyter)
 
 Quick run for the helper:
 
@@ -49,10 +53,22 @@ Quick run for the helper:
 bash scripts/bootstrap.sh
 ```
 
+On Windows PowerShell:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\bootstrap.ps1
+```
+
 If you want setup only (no auto-launch):
 
 ```bash
 bash scripts/bootstrap.sh --setup-only
+```
+
+Windows PowerShell setup-only:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\bootstrap.ps1 -SetupOnly
 ```
 
 Then continue with the manual steps below (activate env + launch Jupyter), or directly open notebook 0.
